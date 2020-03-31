@@ -11,7 +11,7 @@ body {
   font-size: 1em;
   line-height: 1.65;
   color: #373F49;
-  background: #eee;
+  background: #fff;
   margin: 0;
 }
 
@@ -35,6 +35,11 @@ a {
   width: calc(100% - 10vmin);
   margin: 0 auto;
   padding: 5vmin 0;
+}
+
+.container {
+  max-width: 1118px;
+  margin: 0 auto;
 }
 
 /**

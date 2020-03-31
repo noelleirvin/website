@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
+import Hero from '../components/Hero/hero'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import ArticlePreview from '../components/ArticlePreview/article-preview'
 
 class RootIndex extends React.Component {
   render() {
@@ -73,13 +73,11 @@ export const pageQuery = graphql`
           }
           title
           heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
+            fixed(
+              width: 600
+              height: 600
             ) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFixed_noBase64
             }
           }
         }

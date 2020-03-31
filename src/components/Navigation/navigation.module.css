@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25em;
+  height: 10vh;
+  max-height: 100px;
+  /* border-bottom: 1px solid #F7CAC9; */
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.navigationLinks {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.navigationItem {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.navigationItem a {
+  color: currentColor;
+  text-decoration: none;
+}
