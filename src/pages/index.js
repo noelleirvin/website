@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/Hero/hero'
+import About from '../components/About/about'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/ArticlePreview/article-preview'
 
@@ -17,6 +18,7 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
+          <About data={author.node}/>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
@@ -74,8 +76,7 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fixed(
-              width: 600
-              height: 600
+              width: 1118
             ) {
               ...GatsbyContentfulFixed_noBase64
             }

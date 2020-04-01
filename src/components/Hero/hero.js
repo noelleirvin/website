@@ -21,7 +21,7 @@ const addBullets = (title) => {
 // }
 
 export default ({ data }) => (
-  <div className={styles.hero}>
+  <div className={`${styles.hero} container`}>
     <div className={styles.heroImageContainer}>
       <Img className={styles.heroImage} alt={data.name} fixed={data.heroImage.fixed} />
     </div>

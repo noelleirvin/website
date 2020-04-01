@@ -1,5 +1,6 @@
 .hero {
-  margin: 50px 0;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,9 +17,11 @@
 }
 
 .heroImageContainer {
+  margin: 10px 1em 0;
   display: flex;
+  position: relative;
   object-fit: cover;
-  width: 80%;
+  width: 100%;
   height: auto;
   background: rgba(247,202,201, 0.4);
   justify-content: center;
@@ -26,10 +29,16 @@
   /* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
 }
 
+@media(min-width: 768px) {
+  .heroImageContainer {
+    width: 80%;
+  }
+}
+
 @media(min-width: 1024px) {
   .heroImageContainer{
-    width: 535px;
-    height: 535px;
+    width: 100%;
+    height: 540px;
   }
 }
 
@@ -38,36 +47,47 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 35vh;
-  width: 75%;
+  /* height: 35vh; */
+  width: 100%;
   max-height: 300px;
+  position: relative;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
   /* border: 3px solid #F7CAC9; */
 }
+@media(min-width: 768px) {
+  .heroImage {
+    width: auto;
+    max-height: 500px;
+  }
+}
+
 
 @media(min-width: 1024px) {
   .heroImage {
     height: 61.8vh;
+    margin: 0 22px;
     max-height: 500px;
-    width: auto;
+    max-width: 1046px;
   }
 }
 
 .heroDetails {
-  /* position: absolute; */
-  /* background: rgba(0, 0, 0, 0.7); */
-  /* left: 50%; */
-  /* bottom: 0; */
+  position: absolute;
+  background:rgba(247,202,201, 0.4);
+  bottom: 30px;
+  color: white;
   /* transform: translate(-50%, 0); */
   /* font-size: 14px; */
   text-align: center;
-  padding: 0 0.5em; 
+  padding: 0.5em; 
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 768px) {
   .heroDetails {
-    padding: 0 5em;
+    /* padding: 0 5em; */
+    right: 55px;
+    bottom: 80px;
   }
 }
 
@@ -75,11 +95,13 @@
 
 .heroHeadline {
   margin: 20px 0 0;
+  line-height: 1em;
   font-size: 36px;
 }
 
 .heroTitle {
   margin: 0;
+  line-height: 1.5em;
   font-size: 20px;
   /* font-weight: bold; */
 } 
@@ -89,7 +111,7 @@
     font-size: 4em;
   }
   .heroTitle {
-    font-size: 1.625em;
+    font-size: 1.375em;
   }
 }
 

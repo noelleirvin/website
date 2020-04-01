@@ -1,15 +1,17 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  font-size: 1.25em;
+  font-size: 0.75em;
   height: 10vh;
   max-height: 100px;
+  padding: 20px 0 0;
   /* border-bottom: 1px solid #F7CAC9; */
 }
 
 .home {
   display: inline-flex;
   align-items: center;
+  font-size: 1.5em;
   margin: 0 1em;
 }
 
@@ -31,4 +33,13 @@
 .navigationItem a {
   color: currentColor;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    font-size: 1.25em;
+  }
+  .home {
+    font-size: 1.25em;
+  }
 }
