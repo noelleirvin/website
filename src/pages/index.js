@@ -81,6 +81,13 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFixed_noBase64
             }
           }
+          banner: images {
+            fluid(
+              maxWidth: 1440
+              ) {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
         }
       }
     }
