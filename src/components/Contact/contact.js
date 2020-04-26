@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import Fade from "react-reveal/Fade"
 
 import styles from './contact.module.css'
 
@@ -7,9 +8,12 @@ import styles from './contact.module.css'
 export default ({ data }) => (
     <>
   <div id="contact" className={styles.contact}>
+    <Fade bottom>
     <span className={styles.header}>Contact</span> 
-    <p className={styles.text}>Interested in working with me? Send me a message below or reach me through LinkedIn.</p>
+    <p className={styles.text}>{data.contactText}</p>
+    </Fade>
     <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <Fade bottom cascade delay={100}>
         <input type="hidden" name="bot-field" />
         <label>
             <span>Name</span>
@@ -30,7 +34,7 @@ export default ({ data }) => (
         <span className={styles.button}>
         <button type="submit">Send</button>
         </span>
-        {/* <input type="reset" value="Clear" /> */}
+        </Fade>
         </form>
    </div>
 </>

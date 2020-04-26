@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import ArticlePreview from '../components/ArticlePreview/article-preview'
 import Contact from '../components/Contact/contact';
 import Footer from '../components/Footer/footer'
+import Fade from "react-reveal/Fade"
 
 class RootIndex extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class RootIndex extends React.Component {
           <About data={author.node}/>
           <div id="portfolio" className="background">
             <div className="wrapper">
+              <Fade bottom duration={2500} distance={"50%"}>
               <h2 className="section-headline">Portfolio</h2>
               <ul className="article-list">
                 {posts.map(({ node }) => {
@@ -33,6 +35,7 @@ class RootIndex extends React.Component {
                   )
                 })}
               </ul>
+              </Fade>
             </div>
           </div>
           <Contact data={author.node} />
@@ -80,6 +83,18 @@ export const pageQuery = graphql`
             shortBio
           }
           title
+          aboutHeading
+          aboutText1 {
+            aboutText1
+          }
+          aboutText2 {
+            aboutText2
+          }
+          quote {
+            quote
+          }
+          author
+          contactText
           heroImage: image {
             fluid(
               maxWidth: 700

@@ -6,6 +6,7 @@
     font-display: swap;
   }
 
+
 .hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -62,11 +63,11 @@
 @media (min-width: 1024px) {
     .hero{
         grid-template-columns: 65% 35%;
-        align-items: center;
+        align-items: end;
         justify-items: start;
     }
     .heroDetails {
-        margin: 0 36px;
+        margin: 0 36px 36px;
     }
     .heroHeadline {
         font-size: 45px;
