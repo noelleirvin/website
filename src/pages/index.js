@@ -6,6 +6,8 @@ import Hero from '../components/Hero/hero'
 import About from '../components/About/about'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/ArticlePreview/article-preview'
+import Contact from '../components/Contact/contact';
+import Footer from '../components/Footer/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -19,18 +21,22 @@ class RootIndex extends React.Component {
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <About data={author.node}/>
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+          <div id="portfolio" className="background">
+            <div className="wrapper">
+              <h2 className="section-headline">Portfolio</h2>
+              <ul className="article-list">
+                {posts.map(({ node }) => {
+                  return (
+                    <li key={node.slug}>
+                      <ArticlePreview article={node} />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
+          <Contact data={author.node} />
+          <Footer data = {author.node} />
         </div>
       </Layout>
     )
@@ -75,10 +81,10 @@ export const pageQuery = graphql`
           }
           title
           heroImage: image {
-            fixed(
-              width: 1118
+            fluid(
+              maxWidth: 700
             ) {
-              ...GatsbyContentfulFixed_noBase64
+              ...GatsbyContentfulFluid_noBase64
             }
           }
           banner: images {

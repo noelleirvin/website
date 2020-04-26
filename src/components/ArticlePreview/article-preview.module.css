@@ -1,5 +1,26 @@
+@font-face {
+  font-family: "OpenSans_Rg";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/OpenSans-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+
+.previewImage {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .previewTitle {
-  font-size: 1.5em;
+  font-size: 20px;
+  line-height: 27px;
+  color: #1e1e1e;
+  font-family: "OpenSans_Rg", sans-serif;
+  padding-bottom: 94px;
+  margin: 18px 0 0;
+}
+
+.previewTitle a {
+  text-decoration: none;
 }
 
 .tag {
