@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import logo from "../../images/logo.png"
 
 import styles from './hero.module.css'
 
