@@ -2,9 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
+import Hero from '../components/Hero/hero'
+import About from '../components/About/about'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import ArticlePreview from '../components/ArticlePreview/article-preview'
+import Contact from '../components/Contact/contact';
+import Footer from '../components/Footer/footer'
+import Fade from "react-reveal/Fade"
 
 class RootIndex extends React.Component {
   render() {
@@ -17,18 +21,25 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+          <About data={author.node}/>
+          <div id="portfolio" className="background">
+            <div className="wrapper">
+              <Fade bottom duration={2500} distance={"50%"}>
+              <h2 className="section-headline">Portfolio</h2>
+              <ul className="article-list">
+                {posts.map(({ node }) => {
+                  return (
+                    <li key={node.slug}>
+                      <ArticlePreview article={node} />
+                    </li>
+                  )
+                })}
+              </ul>
+              </Fade>
+            </div>
           </div>
+          <Contact data={author.node} />
+          <Footer data = {author.node} />
         </div>
       </Layout>
     )
@@ -72,14 +83,30 @@ export const pageQuery = graphql`
             shortBio
           }
           title
+          aboutHeading
+          aboutText1 {
+            aboutText1
+          }
+          aboutText2 {
+            aboutText2
+          }
+          quote {
+            quote
+          }
+          author
+          contactText
           heroImage: image {
             fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
+              maxWidth: 700
             ) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+          banner: images {
+            fluid(
+              maxWidth: 1440
+              ) {
+              ...GatsbyContentfulFluid_noBase64
             }
           }
         }

@@ -1,0 +1,111 @@
+.contact {
+    text-align: center;
+    margin: 0 10% 200px;
+}
+
+.header {
+    font-family: "OpenSans_SemiBd", sans-serif;
+    font-size: 36px;
+    line-height: 49px;
+    display: block;
+    color: #1e1e1e;
+    padding-bottom: 30px;
+}
+
+.text {
+    /* margin: 50px 25px 0; */
+    /* padding: 64px 45px; */
+    font-size: 18px;
+    line-height: 31px;
+    margin: 0;
+    color: #1e1e1e;
+    padding-bottom: 30px;
+    /* background: rgba(247, 202, 201, 0.2); */
+}
+
+.contact form {
+    display: grid;
+    font-size: 18px;
+    line-height: 31px;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    grid-gap: 15px;
+}
+
+.contact input {
+    height: 40px;
+    width: 100%;
+    /* margin: 0 0 15px; */
+    border: 1px solid #1e1e1e;
+}
+
+.contact textarea {
+    height: 200px;
+    width: 100%;
+    /* margin: 0 0 15px; */
+    border: 1px solid #1e1e1e;
+}
+
+.contact label {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: start;
+    width: 100%;
+}
+
+.contact .button {
+    margin: auto;
+    background: #F7CAC9;
+    cursor: pointer;
+}
+
+.contact button {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 8px 32px;
+    margin: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.contact .button:hover {
+    background: rgba(247,202,201, 0.4);
+}
+
+@media (min-width: 1024px) {
+    .contact {
+        margin: 0 25% 200px;
+    }
+    .contact form {
+        width: 512px;
+        margin: auto;
+    }
+    .contact label {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        justify-items: start;
+        align-items: start;
+        width: auto;
+        grid-gap:15px;
+    }
+    .contact input {
+        height: 40px;
+        width: 395px;
+        margin: 0 0 15px;
+        border: 1px solid #1e1e1e;
+    }
+    
+    .contact textarea {
+        height: 200px;
+        width: 395px;
+        margin: 0 0 15px;
+        border: 1px solid #1e1e1e;
+    }
+}
+
+.contact {
+    padding-top: 200px;
+  }
+

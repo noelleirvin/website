@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "OpenSans_SemiBd";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/OpenSans-SemiBold.ttf") format("ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/Montserrat-Regular.ttf") format("ttf");
+    font-display: swap;
+  }
+
+
+
+.page1 {
+    display: grid;
+    padding: 50px 0;
+}
+
+.portrait {
+    height: 100%;
+}
+
+.header {
+    font-family: "OpenSans_SemiBd", sans-serif;
+    font-size: 36px;
+    line-height: 49px;
+    display: block;
+    color: #1e1e1e;
+    padding-bottom: 30px;
+}
+
+.aboutText1 {
+    margin: 50px 25px 0;
+    padding: 64px 45px;
+    font-size: 18px;
+    line-height: 31px;
+    color: #1e1e1e;
+    background: rgba(247, 202, 201, 0.2);
+}
+
+.about p {
+    margin: 0;
+}
+
+.page2{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.aboutText2 {
+    padding: 64px 45px;
+    margin: 50px 25px 0;
+    font-size: 18px;
+    line-height: 31px;
+    color: #1e1e1e;
+    background: rgba(247, 202, 201, 0.2);
+    order: 2;
+}
+
+.aboutQuoteContainer {
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 35px;
+    background:  #F7CAC9;
+    margin: 50px 0 0;
+    order: 3;
+}
+
+.accent {
+    border: 1px solid #FFFFFF;
+    display: grid;
+    align-items: end;
+    justify-items: end;
+    margin: 25px;
+    padding: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.aboutQuoteImageWrapper {
+    width: 100%;
+    order: 1;
+}
+
+@media (min-width: 1024px) {
+    .about {
+        padding: 200px 11%;
+    }
+    .page1 {
+        height: 90vh;
+        max-height: 900px;
+        grid-template-columns: 53% 47%;
+        align-items: end;
+    }
+    .aboutText1, .aboutText2 {
+        margin: 0;
+    }
+    .page2 {
+        max-height: 900px;
+        margin-top: 150px;
+        /* height: 90vh; */
+        grid-template-columns: 47% 53%;
+        align-items: start;
+        justify-items: initial;
+        padding-top: 50px;
+    }
+    .aboutText2 {
+        grid-row: 1 / span 1;
+        margin: 0;
+    }
+    .aboutQuoteContainer {
+        margin: -10% -22% 23% 25%;
+    }
+    .aboutQuoteImage {
+        width: auto;
+        height: 100%;
+        
+    }
+    .aboutQuoteImageWrapper {
+        height: 90%;
+        width: auto;
+        margin: 0 0 0 17%;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
