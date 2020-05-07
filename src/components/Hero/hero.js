@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import logo from "../../images/logo.png"
 
 import styles from './hero.module.css'
 
@@ -14,10 +15,10 @@ const Hero = ({ data }) => {
       </div>
     </Fade>
     <div className={styles.heroDetails} id="heroDetails">
-     <Fade delay={5500} duration={1000}>
+     <Fade delay={4750} duration={1000}>
         <div className={styles.heroNav}>
             <a onClick={() => scrollTo("#about")}>About</a>
-            <a onClick={() => scrollTo("#portfolio")}>Portfolio</a>
+            {/* <a onClick={() => scrollTo("#portfolio")}>Portfolio</a> */}
             <a onClick={() => scrollTo("#contact")}>Contact</a>
         </div>
       </Fade>
@@ -28,14 +29,14 @@ const Hero = ({ data }) => {
               <span className={styles.heroAccent}> {data.title.split(" ")[1]}</span>
             </div>
           </Fade>
-          <Fade bottom delay={4000} duration={1000}>
+          <Fade bottom delay={3500} duration={1000}>
             <div id="headerLine2" className={styles.headerLine2}>
               {data.name}
             </div>
             </Fade>
         </div>
         
-      <Fade delay={5500} duration={1000}>
+      <Fade delay={4750} duration={1000}>
         <p className={styles.heroText}>
           {data.shortBio.shortBio.split(".")[0] + ". " + data.shortBio.shortBio.split(".")[1] + "."}
           <br/> <br/>

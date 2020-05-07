@@ -35,7 +35,7 @@
 
 .heroNav a {
     color: #1e1e1e;
-    opacity: 70%;
+    /* opacity: 70%; */
     font-size: 18px;
     line-height: 25px;
     text-decoration: none;
@@ -52,7 +52,7 @@
 }
 
 .heroAccent {
-    color: #F7CAC9;
+    color: #1e1e1e;
 }
 
 .heroText {
@@ -76,5 +76,16 @@
     }
     .heroImage {
         height: 100vh
+    }
+}
+
+@media (max-height: 650px) {
+    .heroHeadline {
+        font-size: 7vh;
+        line-height: 7.5vh;
+    }
+    .heroText {
+        font-size: 4vh;
+        line-height: 4.5vh;
     }
 }

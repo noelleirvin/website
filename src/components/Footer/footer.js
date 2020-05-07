@@ -9,10 +9,10 @@ export default ({ data }) => (
     <>
   <div className={styles.footer}>
     {/* <span className={styles.header}>Contact</span>  */}
-        <a href="#">
+        <a href="https://github.com/noelleirvin" target="_blank" rel="noopener noreferrer">
             <img className={styles.icon} src={githubIcon}/>
         </a>
-        <a href='#'>
+        <a href="https://www.linkedin.com/in/noelle-irvin" target="_blank" rel="noopener noreferrer">
             <img className={styles.icon} src={linkedInIcon}/>
         </a>
    </div>

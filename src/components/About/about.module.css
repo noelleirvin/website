@@ -84,8 +84,8 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.aboutQuoteImage {
-    width: 60%;
+.aboutQuoteImageWrapper {
+    width: 100%;
     order: 1;
 }
 
@@ -119,6 +119,12 @@
         margin: -10% -22% 23% 25%;
     }
     .aboutQuoteImage {
+        width: auto;
+        height: 100%;
+        
+    }
+    .aboutQuoteImageWrapper {
+        height: 90%;
         width: auto;
         margin: 0 0 0 17%;
         grid-column: 2;

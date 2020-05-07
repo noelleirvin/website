@@ -44,7 +44,7 @@ export default ({ data }) => (
         </Fade>
         </div>
         </Fade>
-        <Img className={`${styles.aboutQuoteImage} ${styles.aboutItem}`} alt={data.name} fluid={data.banner[2].fluid} />
+        <span className={styles.aboutQuoteImageWrapper}><Img className={`${styles.aboutQuoteImage} ${styles.aboutItem}`} alt={"Photo by Travis Gergen on Unsplash"} fluid={data.banner[2].fluid} /></span>
       </div>
       </Fade>
    </div>

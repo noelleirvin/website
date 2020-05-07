@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import base from './base.css'
-import Navigation from './Navigation/navigation'
+// import Navigation from './Navigation/navigation'
 
 class Template extends React.Component {
   render() {

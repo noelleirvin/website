@@ -60,7 +60,7 @@ a {
  */
 .article-list {
   margin: 0 11%;
-  padding: 0;
+  padding: 0 0 75px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -90,4 +90,14 @@ a {
 
 .list-inline li {
   display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .article-list {
+    padding: 0;
+  }
+}
+
+#portfolio {
+  display: none;
 }
