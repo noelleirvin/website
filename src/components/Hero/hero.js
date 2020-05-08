@@ -35,7 +35,7 @@ const Hero = ({ data }) => {
             </Fade>
         </div>
         
-      <Fade ssoReveal delay={4750} duration={1000}>
+      <Fade ssrReveal delay={4750} duration={1000}>
         <p className={styles.heroText}>
           {data.shortBio.shortBio.split(".")[0] + ". " + data.shortBio.shortBio.split(".")[1] + "."}
           <br/> <br/>
