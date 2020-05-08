@@ -8,7 +8,7 @@ import styles from './about.module.css'
 export default ({ data }) => (
     <>
   <div className={styles.about}>
-  <Fade bottom duration={2500}>
+  <Fade bottom duration={2500} fraction={0.05}>
       <div id="about" className={styles.page1}>
             <Img className={styles.portrait} alt={data.name} fluid={data.heroImage.fluid} />
         <Fade right duration={2500}>
