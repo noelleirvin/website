@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade';
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -35,13 +35,21 @@ const Hero = ({ data }) => {
             </Fade>
         </div>
         
-      <Fade delay={4750} duration={1000}>
+      <Fade ssoReveal delay={4750} duration={1000}>
         <p className={styles.heroText}>
           {data.shortBio.shortBio.split(".")[0] + ". " + data.shortBio.shortBio.split(".")[1] + "."}
           <br/> <br/>
           {data.shortBio.shortBio.split(".")[2]}
         </p>
       </Fade>
+
+      <span className={styles.seoText}>
+        <p className={styles.heroText}>
+          {data.shortBio.shortBio.split(".")[0] + ". " + data.shortBio.shortBio.split(".")[1] + "."}
+          <br/> <br/>
+          {data.shortBio.shortBio.split(".")[2]}
+        </p>
+      </span>
     </div>
   </div>
     )
