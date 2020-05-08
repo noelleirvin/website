@@ -89,3 +89,7 @@
         line-height: 4.5vh;
     }
 }
+
+.seoText {
+    display: none;
+}

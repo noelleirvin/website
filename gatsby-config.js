@@ -18,9 +18,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Noelle Irvin',
+    description: 'I am a software engineer and web developer. I enjoy designing and developing websites for small businesses.'
   },
-  pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
@@ -30,6 +30,20 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Noelle Irvin`,
+        short_name: `Noelle`,
+        description: `I am a software engineer and web developer. I enjoy designing and developing websites for small businesses.`,
+        start_url: `/`,
+        lang: `en`,
+        background_color: `#F7CAC9`,
+        theme_color: `#F7CAC9`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`
+      },
+    },
   ],
 }

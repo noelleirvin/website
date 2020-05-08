@@ -13,13 +13,17 @@ import Fade from "react-reveal/Fade"
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteDescription = get(this, 'props.data.site.siteMetadata.description')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+          <Helmet><title>{siteTitle}</title>
+          <meta name="description" content={siteDescription}/>
+          <html lang="en" />
+          </Helmet>
           <Hero data={author.node} />
           <About data={author.node}/>
           <div id="portfolio" className="background">
@@ -53,6 +57,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
