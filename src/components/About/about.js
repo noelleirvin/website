@@ -13,7 +13,7 @@ export default ({ data }) => (
             <Img className={styles.portrait} alt={data.name} fluid={data.heroImage.fluid} />
         <Fade right duration={2500}>
             <div className={styles.aboutText1}>
-                <Fade delay={500} duration={500}>
+                <Fade duration={500}>
                 <span className={styles.header}>{data.aboutHeading}</span> 
                 <p>
                 {data.aboutText1.aboutText1}</p>
